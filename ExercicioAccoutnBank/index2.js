@@ -1,4 +1,4 @@
-//this code return user's account data 
+//this code return user's account data
 
 class Account {
   constructor() {
@@ -19,12 +19,12 @@ class Belance extends Account {
     const listValues = [
       {
         income: 300,
-        outcome: 2,
+        outcome: 400,
       },
 
       {
         income: 200,
-        outcome: 100,
+        outcome: 300,
       },
     ];
 
@@ -44,7 +44,11 @@ class Belance extends Account {
       .map((result) => result.income - result.outcome++)
       .reduce((accumulator, index) => accumulator + index);
 
-    console.log(`Saldo Atual R$: ${result} `);
+    if (output > input) {
+      console.log("saldo insulficiente para saque");
+    } else {
+      console.log(`Saldo Atual R$: ${result} `);
+    }
   }
 }
 

@@ -1,5 +1,4 @@
-
-//Learning about Reduce Array
+// //Learning about Reduce Array
 
 const clotherStore = [
   {
@@ -12,7 +11,12 @@ const clotherStore = [
   },
 ];
 
-const totalValue = clotherStore
-  .reduce((accumultator, index) => accumultator + index.price, 0);
+const totalValue = clotherStore.reduce(
+  (accumultator, index) => accumultator + index.price,
+  0
+);
 
 console.log(totalValue);
+
+const array = [1, 2, 3, 4].reduce((acc, index) => acc + index, 2);
+console.log(array);

@@ -1,7 +1,6 @@
-
 // Learnig about destructure
 const family = {
-  name: "Fagner",
+  me: "Fagner",
   father: "Fernando",
   mother: "Lucia",
   brother: {
@@ -10,10 +9,10 @@ const family = {
 };
 
 const {
-  name,
+  me,
   father,
   mother,
   brother: { brotherNames },
 } = family;
 
-console.log(name, father, mother, brotherNames);
+console.log(me, father, mother, brotherNames);

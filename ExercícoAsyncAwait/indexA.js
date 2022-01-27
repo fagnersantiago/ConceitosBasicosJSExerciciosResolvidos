@@ -1,8 +1,9 @@
-const delay = () => new Promise ( resolve => setTimeout( resolve, 5000)) 
+const delay = () => new Promise((resolve) => { setTimeout(() => { resolve ("ok")}, 5000)});
 
-const onePerSecond = async () => {
+async function onePerSecond(){
 
-    await delay(console.log('5s'))
+  console.log(await delay())
 }
+onePerSecond();
 
-onePerSecond()
+
