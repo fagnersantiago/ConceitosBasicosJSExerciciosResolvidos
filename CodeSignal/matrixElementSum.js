@@ -7,7 +7,7 @@ function solution(matrix) {
 
   //Primero for para ler as linha da matrix
   for (let i = 0; i < matrix.length; i++) {
-    //segundo fro para ler as colunas
+    //segundo for para ler as colunas
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === 0) {
         removeRoom.push(j);
