@@ -1,19 +1,15 @@
 function solution(inputArray) {
   let longestString = [];
-  let string1 = "";
-  let string2 = "";
 
-  for (let i = 0; i < inputArray.length; i++) {
-    string1 = inputArray[i];
-    string2 = inputArray[i + 1];
+  for (let i = 1; i < inputArray.length; i++) {
+    let foundLengthString = inputArray[0].length;
 
-    if ((string1 > string2 && string2 < string1) || string2 === undefined)
-      longestString.push(string1);
+    if (foundLengthString < inputArray[i].length) {
+      foundLengthString = inputArray[i].length;
+    }
   }
 
   return longestString;
 }
 
-console.log(
-  solution(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"])
-);
+console.log(solution(["aba", "aa", "ad", "vcd", "aba"]));

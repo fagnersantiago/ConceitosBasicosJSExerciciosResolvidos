@@ -11,6 +11,7 @@ function solution(matrix) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === 0) {
         removeRoom.push(j);
+        console.log(removeRoom);
       } else if (removeRoom.indexOf(j) === -1) {
         sumOfRooms += matrix[i][j];
       }
