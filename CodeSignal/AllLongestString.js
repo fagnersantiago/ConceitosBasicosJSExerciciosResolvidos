@@ -1,15 +1,29 @@
 function solution(inputArray) {
-  let longestString = [];
-
+  let findLongestStrings = inputArray[0].length;
   for (let i = 1; i < inputArray.length; i++) {
-    let foundLengthString = inputArray[0].length;
-
-    if (foundLengthString < inputArray[i].length) {
-      foundLengthString = inputArray[i].length;
+    if (findLongestStrings < inputArray[i].length) {
+      findLongestStrings = inputArray[i].length;
     }
   }
+  inputArray = inputArray.filter(
+    (values) => values.length === findLongestStrings
+  );
 
-  return longestString;
+  return inputArray;
 }
 
-console.log(solution(["aba", "aa", "ad", "vcd", "aba"]));
+console.log(
+  solution(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"])
+);
+
+// function allLongestStrings(inputArray) {
+//   return inputArray.filter(
+//     (str) =>
+//       str.length ===
+//       inputArray
+//         .map((str) => str.length)
+//         .sort((a, b) => a - b)
+//         .pop()
+//   );
+// }
+// console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
