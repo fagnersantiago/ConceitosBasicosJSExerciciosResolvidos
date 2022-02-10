@@ -1,22 +1,20 @@
 function solution(n) {
   let string = String(n);
   let result = string.split("");
-  let arr = [];
-  const sliceArray = result.reduce((acc, currentValue, currentIndex) => {
-    const index = Math.floor(currentIndex / 2);
-    if (!acc[index]) {
-      acc[index] = [];
-    }
-    acc[index].push(currentValue);
-    return acc;
-  }, []);
+  let getSecondNumber = result.slice(result.length / 2);
+  let getFirstNumber = result.slice(0, result.length / 2);
 
-  for (let value in sliceArray) {
-    let result1 = parseInt(sliceArray[value][0]);
-    let result2 = parseInt(sliceArray[value][1]);
-    let sum = result1 + result2;
-    arr.push(sum);
-  }
-  return arr;
+  let sumAllElementFirstArray = getFirstNumber.reduce(
+    (acc, currentValue) => parseInt(acc) + parseInt(currentValue)
+  );
+
+  let sumAllElementSecondArray = getSecondNumber.reduce(
+    (previousValue, currentValue) => {
+      return parseInt(previousValue) + parseInt(currentValue);
+    }
+  );
+
+  return sumAllElementFirstArray === sumAllElementSecondArray ? true : false;
 }
-solution(121212);
+
+solution(239017);
