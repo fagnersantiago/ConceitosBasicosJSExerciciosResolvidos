@@ -1,8 +1,8 @@
 function solution(inputString) {
   let reg = /\(([^()]*)\)/i;
-  let str = reg.exec(inputString)[1].split("").reverse().join("");
+  let str = reg.exec(inputString)[1].split().reverse().join("");
+  let removeParentheseAndContcat = inputString.replace(reg, str[0]);
 
-  let removeParentheseAndContcat = inputString.replace(/\s*\(.*?\)\s*/g, str);
   console.log(removeParentheseAndContcat);
 }
 
