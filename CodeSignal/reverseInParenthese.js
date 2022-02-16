@@ -1,9 +1,13 @@
 function solution(inputString) {
-  let reg = /\(([^()]*)\)/i;
-  let str = reg.exec(inputString)[1].split().reverse().join("");
-  let removeParentheseAndContcat = inputString.replace(reg, str[0]);
+  let reg = /\(([^\(\)]*)\)/i;
 
-  console.log(removeParentheseAndContcat);
+  while (reg.test(inputString)) {
+    inputString = inputString.replace(reg, (match, capture) =>
+      capture.split("").reverse().join("")
+    );
+  }
+
+  console.log(inputString);
 }
 
 solution("foo(bar(baz))blim");
