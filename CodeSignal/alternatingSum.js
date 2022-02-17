@@ -2,7 +2,8 @@
 //step 2: get value team2
 //step 3: sum team value
 //step 4: sum team2 value
-//step 5 retur value team  and team2
+//step 5 return sum team and team2 in an array
+
 function solution(a) {
   let team1 = [];
   let team2 = [];
@@ -21,6 +22,7 @@ function solution(a) {
   }, 0);
 
   totalWeight.push(sumOfWeightTeam1, sumOfWeightTeam2);
+
   return totalWeight;
 }
 
