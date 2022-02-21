@@ -8,13 +8,11 @@ function solution(picture) {
   arr.push(insertStartAsterisk);
 
   for (let i = 0; i < picture.length; i++) {
-    let asteristico = "*" + picture[i] + "*";
-    arr.push(asteristico);
+    let asterisk = "*" + picture[i] + "*";
+    arr.push(asterisk);
   }
 
   arr.push(insertEndAsterisk);
   console.log(arr);
 }
 solution(["abc", "ded"]);
-
-["*****", "*abc*", "*ded*", "*****"];

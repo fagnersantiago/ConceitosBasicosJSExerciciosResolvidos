@@ -1,7 +1,6 @@
 function solution(a) {
   let peopleHeight = a.filter((height) => height !== -1);
   peopleHeight.sort((a, b) => a - b);
-  console.log(arr);
 
   for (let i = 0; i < a.length; i++) {
     if (a[i] !== -1) {
