@@ -7,7 +7,6 @@ function solution(a) {
       a[i] = peopleHeight.shift();
     }
   }
-  console.log(a);
   return a;
 }
 solution([23, 54, -1, 43, 1, -1, -1, 77, -1, -1, -1, 3]);

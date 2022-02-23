@@ -4,12 +4,13 @@ function solution(inputArray) {
   inputArray.reduce((acc, value) => {
     if (acc >= value) {
       const diff = acc + 1 - value;
-      console.log(diff);
+      // console.log(`valor diff: ${diff}`);
       count += diff;
-      return acc + 1;
+      // console.log(`valor contador: ${count}`);
+      return console.log(acc + 1);
     }
     return value;
   });
-  console.log(count);
+  console.log(`resultado final: ${count}`);
 }
 solution([2, 3, 3, 5, 5, 5, 4, 12, 12, 10, 15]);

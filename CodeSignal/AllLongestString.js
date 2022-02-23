@@ -15,15 +15,3 @@ function solution(inputArray) {
 console.log(
   solution(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"])
 );
-
-// function allLongestStrings(inputArray) {
-//   return inputArray.filter(
-//     (str) =>
-//       str.length ===
-//       inputArray
-//         .map((str) => str.length)
-//         .sort((a, b) => a - b)
-//         .pop()
-//   );
-// }
-// console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
