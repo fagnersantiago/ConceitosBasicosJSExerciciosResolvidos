@@ -4,10 +4,10 @@ function solution(inputArray) {
   inputArray.reduce((acc, value) => {
     if (acc >= value) {
       const diff = acc + 1 - value;
-      // console.log(`valor diff: ${diff}`);
+      //console.log(`valor diff: ${diff}`);
       count += diff;
-      // console.log(`valor contador: ${count}`);
-      return console.log(acc + 1);
+      console.log(`valor contador: ${count}`);
+      return acc + 1;
     }
     return value;
   });
