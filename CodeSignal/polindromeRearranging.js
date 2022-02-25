@@ -1,5 +1,6 @@
 function solution(inputString) {
-  //   const isPolindrome = inputString.split("").reverse().join("");
+  const isPolindrome = inputString.split("")[0];
+
   //   aabb;
   //   abba;
   //   abbcabb;
@@ -8,14 +9,18 @@ function solution(inputString) {
   //   zyzzzzyz;
   //   zaa;
   //   aza;
-  for (let i = 0; i < inputString.length; i++) {
-    if (inputString.length === 4 && inputString[i] !== inputString[i + 1]) {
-      inputString = inputString[i + 1] + inputString[i];
-
-      // console.log(inputString);
-    }
-  }
-  return console.log(inputString);
+  // for (let i = 0; i < inputString.length; i++) {
+  //   if (inputString.length >= 3 && inputString[i] !== inputString[i + 1]) {
+  //     inputString = inputString[i + 1] + inputString[i];
+  //   }
+  // }
+  // let r = inputString + inputString[0];
+  // if (r === r.split("").reverse().join("")) {
+  //   console.log(r);
+  //   return console.log(true);
+  // }
+  // return false;
+  console.log(isPolindrome);
 }
 
 solution("aabb");
