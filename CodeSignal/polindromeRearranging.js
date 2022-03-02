@@ -1,26 +1,27 @@
 function solution(inputString) {
-  const isPolindrome = inputString.split("")[0];
+  const isPolindrome = inputString.split("");
+  let result = isPolindrome.slice(0, isPolindrome.length / 2);
+  let result2 = isPolindrome.slice(isPolindrome.length / 2);
+  let joi1 = result.join("");
+  let part1 = joi1.slice(0, 2);
+  let partFinal = joi1.slice(-2).split(" ").reverse().join(" ");
+  let joi = result2.join("");
+  let polindrome = partFinal + joi + part1;
 
-  //   aabb;
-  //   abba;
-  //   abbcabb;
-  //   abbcbba;
-  //   zyyzzzzz;
-  //   zyzzzzyz;
-  //   zaa;
-  //   aza;
-  // for (let i = 0; i < inputString.length; i++) {
-  //   if (inputString.length >= 3 && inputString[i] !== inputString[i + 1]) {
-  //     inputString = inputString[i + 1] + inputString[i];
-  //   }
-  // }
-  // let r = inputString + inputString[0];
-  // if (r === r.split("").reverse().join("")) {
-  //   console.log(r);
-  //   return console.log(true);
-  // }
-  // return false;
-  console.log(isPolindrome);
+  let verifyIfIsPolindrome = part1 + joi + partFinal;
+  if (verifyIfIsPolindrome == polindrome) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-solution("aabb");
+solution("abbcabb");
+
+//   abba;
+//   abbcabb;
+//   abbcbba;
+//   zyyzzzzz;
+//   zyzzzzyz;
+//   zaa;
+//   aza;
