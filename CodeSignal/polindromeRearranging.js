@@ -1,27 +1,24 @@
 function solution(inputString) {
-  const isPolindrome = inputString.split("");
-  let result = isPolindrome.slice(0, isPolindrome.length / 2);
-  let result2 = isPolindrome.slice(isPolindrome.length / 2);
-  let joi1 = result.join("");
-  let part1 = joi1.slice(0, 2);
-  let partFinal = joi1.slice(-2).split(" ").reverse().join(" ");
-  let joi = result2.join("");
-  let polindrome = partFinal + joi + part1;
+  let charToObj = {};
+  // primeiro obter a contidade de caracteres tranformando em um objeto
+  for (const value of inputString) {
+    if (!charToObj[value]) {
+      charToObj[value] = 1;
+    } else {
+      charToObj[value] = charToObj[value] + 1;
+    }
+  }
+  //para ser um polindromo os elementos iguais devem ser par ou se tiver ao menos um ímpar entre os elementos
 
-  let verifyIfIsPolindrome = part1 + joi + partFinal;
-  if (verifyIfIsPolindrome == polindrome) {
-    return true;
-  } else {
+  //filtrar os caracteres ímpares
+  let countOddLetter = Object.values(charToObj).filter(
+    (value) => value % 2 !== 0
+  );
+  //se existir mais de um caractere impar então não pode ser um polindoromo
+  if (countOddLetter.length > 1) {
     return false;
   }
+  return true;
 }
 
-solution("abbcabb");
-
-//   abba;
-//   abbcabb;
-//   abbcbba;
-//   zyyzzzzz;
-//   zyzzzzyz;
-//   zaa;
-//   aza;
+solution("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccaaaaaaaaaaaaa");
