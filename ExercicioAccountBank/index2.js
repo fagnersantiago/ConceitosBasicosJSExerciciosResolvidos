@@ -61,6 +61,7 @@ class Belance extends Account {
 
       console.log(`depósito: R$:${userDeposit} `);
     };
+    deposit();
   }
 }
 
