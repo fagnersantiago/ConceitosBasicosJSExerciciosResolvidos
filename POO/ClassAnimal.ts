@@ -8,3 +8,9 @@ export class Dog extends Animal {
     console.log(`${this.name} está latindo`);
   }
 }
+
+export class Cat extends Animal {
+  makeNoise(): void {
+    console.log(`${this.name} está miando`);
+  }
+}
