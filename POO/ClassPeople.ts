@@ -8,3 +8,5 @@ export class People {
     this.nickname = nickname;
   }
 }
+
+const people = new People("fagner", "santiago");

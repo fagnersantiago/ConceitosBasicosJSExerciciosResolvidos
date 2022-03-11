@@ -39,3 +39,7 @@ Com Modificador super podemos acessar a classe mãe apartir de uma subclasse
 #### Protected:
 
 O protected é bem parecido com o private, porém com ele é possível acessa o valor também das subclasses
+
+#### Métodos estáticos
+
+são métodos que podem ser acessados sem instanciar a classe
