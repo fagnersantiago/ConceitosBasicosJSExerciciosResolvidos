@@ -1,6 +1,6 @@
 function solution(inputString) {
   let charToObj = {};
-  // primeiro obter a contidade de caracteres tranformando em um objeto
+  // primeiro obter a quantidade de caracteres tranformando em um objeto
   for (const value of inputString) {
     if (!charToObj[value]) {
       charToObj[value] = 1;
